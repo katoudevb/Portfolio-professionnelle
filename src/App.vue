@@ -18,13 +18,4 @@ import Footer from './components/Footer.vue'
 </script>
 
 <style>
-/* Fond parchemin */
-.bg-parchemin {
-  background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)),
-              url('./assets/images/parchemin.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  min-height: 100vh;
-}
 </style>

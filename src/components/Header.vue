@@ -6,13 +6,15 @@
   <header class="d-flex align-items-center justify-content-between p-3 navbar-creme w-100">
     <!-- Logo à gauche -->
     <div class="d-flex align-items-center">
-      <img 
-        src="@/assets/identite.png" 
-        alt="Photo d'identité" 
-        class="me-3 rounded-circle"
-        width="100" 
-        height="100"
-      />
+      <RouterLink to="/">
+        <img 
+          src="@/assets/identite.png" 
+          alt="Photo d'identité" 
+          class="me-3 rounded-circle"
+          width="100" 
+          height="100"
+        />
+      </RouterLink>
       <h1 class="h4 m-0">Katiana BRICOTTEAUX</h1>
     </div>
 
@@ -31,16 +33,11 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Contenu principal de la page -->
-  <main class="p-3">
-    <RouterView />
-  </main>
 </template>
 
 <style scoped>
 .navbar-creme {
-  background-color: #fdf5e6;
+  background-color: #eebce6ff;
   width: 100%;
   top: 0;
   left: 0;

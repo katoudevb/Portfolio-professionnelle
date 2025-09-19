@@ -1,10 +1,9 @@
-body, #app {
-  min-height: 100vh;
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-image: url('@/assets/images/parchemin.jpg');
-  background-size: cover; /* couvre tout l’écran */
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* le fond reste en place */
-  background-position: center center;
+#app{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
+
+main{
+    background-color: #ecd7d730;
+    padding: 2rem; /* ajoute de l’espace à l’intérieur du main */
+}
+
