@@ -9,8 +9,12 @@
           <div class="card-body">
             <h5 class="card-title">{{ projet.title }}</h5>
             <p class="card-text">{{ projet.desc }}</p>
-            <!-- Bouton Voir -->
-            <button class="btn btn-rose btn-sm" @click="openModal(projet.id)">Voir</button>
+
+            <!-- Toujours ouvrir la modale -->
+            <button class="btn btn-rose btn-sm" @click="openModal(projet.id)">
+              Voir
+            </button>
+
           </div>
         </div>
       </div>
@@ -31,7 +35,16 @@
         </div>
       </div>
 
-      <a :href="projet.pdf" download class="btn btn-rose btn-sm mb-2">Télécharger le projet</a>
+      <!-- PDF seulement si défini -->
+      <a v-if="projet.pdf" :href="projet.pdf" download class="btn btn-rose btn-sm mb-2">
+        Télécharger le projet
+      </a>
+
+      <!-- GitHub seulement si défini -->
+      <button v-if="projet.github" class="btn btn-rose btn-sm mb-2" @click="openGithub(projet.github)">
+        Voir sur GitHub
+      </button>
+
       <button class="btn btn-secondary btn-sm" @click="closeModal">Retour aux projets</button>
       <p class="creation-date">Date de création : {{ projet.date }}</p>
     </div>
@@ -42,7 +55,6 @@
 import { ref } from 'vue';
 import Modal from '@/components/Modal.vue';
 
-// Images projets
 import cvImage from '@/assets/images/cv.png';
 import cahierDesChargesImage from '@/assets/images/cdc.png';
 import commentaireImage from '@/assets/images/Commentaire.png';
@@ -50,26 +62,27 @@ import DesktopImage from '@/assets/images/Desktop.png';
 import MobileImage from '@/assets/images/Mobile.png';
 import PrototypeDesktopImage from '@/assets/images/PrototypeDesktop.png';
 import PrototypeMobileImage from '@/assets/images/PrototypeMobile.png';
+import PortfolioCEFImage from '@/assets/images/PortfolioCEF.png';
 
-// Liste des projets
 interface Projet {
   id: number;
   title: string;
   img: string;
   desc: string;
-  pdf: string;
+  pdf?: string;
+  github?: string;
   date: string;
   extraImgs?: string[];
 }
 
 const projets: Projet[] = [
-  { id: 1, title: 'CV HTML', img: cvImage, desc: 'Projet réalisé avec le langages HTML et CSS', pdf: '/pdf/CV_Kat.pdf', date: '01 Novembre 2024' },
+  { id: 1, title: 'CV HTML', img: cvImage, desc: 'Projet réalisé avec le langages HTML et CSS', github: 'https://github.com/katoudevb/Cv_CEF', date: '01 Novembre 2024' },
   { id: 2, title: 'Cahier des charges', img: cahierDesChargesImage, desc: 'Planification et organisation d\'un projet', pdf: '/pdf/CDC.pdf', date: '05 Janvier 2025' },
-  { id: 3, title: 'Dynamiser un commentaire', img: commentaireImage, desc: 'HTML et JavaScript pour dynamiser les commentaires', pdf: '/pdf/Commentaire.pdf', date: '05 Février 2025' },
-  { id: 4, title: 'Maquette Probeat', img: DesktopImage, desc: 'Maquette mobile et desktop pour le site Probeat', pdf: 'assets/fig/Probeat.fig', date: '06 Avril 2025', extraImgs: [MobileImage, PrototypeDesktopImage, PrototypeMobileImage] }
+  { id: 3, title: 'Dynamiser un commentaire', img: commentaireImage, desc: 'HTML et JavaScript pour dynamiser les commentaires', github: 'https://github.com/katoudevb/Dynamiser_commentaire', date: '05 Février 2025' },
+  { id: 4, title: 'Maquette Probeat', img: DesktopImage, desc: 'Maquette mobile et desktop pour le site Probeat', github: 'https://github.com/tonUser/probeat-maquette', pdf: 'assets/fig/Probeat.fig', date: '06 Avril 2025', extraImgs: [MobileImage, PrototypeDesktopImage, PrototypeMobileImage] },
+  { id: 5, title: 'Portfolio', img: PortfolioCEFImage, desc: 'Portfolio d\'un devoir CEF', github: 'https://github.com/katoudevb/portfolio_cef', date: '18 Mars 2025'}
 ];
 
-// Référence pour la modale active
 const activeModal = ref<number | null>(null);
 
 function openModal(id: number) {
@@ -78,6 +91,10 @@ function openModal(id: number) {
 
 function closeModal() {
   activeModal.value = null;
+}
+
+function openGithub(url: string) {
+  window.open(url, '_blank');
 }
 </script>
 
