@@ -9,7 +9,7 @@
         <h2 class="card-title">Qui suis-je ?</h2>
         <p class="card-text">
           Je m’appelle Katiana BRICOTTEAUX et je suis développeuse web full stack en formation. 
-          Je suis passionnée par la création d’interfaces web intuitives et fonctionnelles, et je maîtrise HTML, CSS, JavaScript et React. 
+          Je suis passionnée par la création d’interfaces web intuitives et fonctionnelles, et je maîtrise HTML, CSS, JavaScript et bien d'autres. 
           Mon objectif est de participer à des projets web innovants tout en développant mes compétences techniques. 
           En dehors du code, je m’intéresse au design UX/UI et à l’optimisation de l’expérience utilisateur.
         </p>

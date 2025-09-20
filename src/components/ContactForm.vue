@@ -20,7 +20,7 @@
             <textarea id="message" v-model="form.message" class="form-control" rows="5" required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+          <button type="submit" class="btn btn-primary w-40">Envoyer</button>
         </form>
 
         <div v-if="submitted" class="alert alert-success mt-3" role="alert">
