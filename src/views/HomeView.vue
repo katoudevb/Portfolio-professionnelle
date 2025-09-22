@@ -21,60 +21,62 @@
       <div class="card-body">
         <h2 class="card-title">Mes compétences techniques</h2>
 
-        <div id="front-end" class="mb-3">
-          <h3>Front-end & Frameworks</h3>
-          <ul>
-            <li>HTML5, CSS3, Sass</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React.js</li>
-            <li>Angular</li>
-            <li>VueJS</li>
-            <li>Bootstrap</li>
-            <li>Responsive Design, UI/UX Design</li>
-          </ul>
-        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <h3>Front-end & Frameworks</h3>
+            <ul>
+              <li>HTML5, CSS3, Sass</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React.js</li>
+              <li>Angular</li>
+              <li>VueJS</li>
+              <li>Bootstrap</li>
+              <li>Responsive Design, UI/UX Design</li>
+            </ul>
+          </div>
 
-        <div id="back-end" class="mb-3">
-          <h3>Back-end & Frameworks</h3>
-          <ul>
-            <li>Node.js</li>
-            <li>Django</li>
-            <li>Symfony 7</li>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>API REST</li>
-            <li>Gestion de bases de données (MongoDB, MySQL)</li>
-          </ul>
-        </div>
+          <div class="col-md-6 mb-3">
+            <h3>Back-end & Frameworks</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Django</li>
+              <li>Symfony 7</li>
+              <li>PHP</li>
+              <li>Python</li>
+              <li>API REST</li>
+              <li>Gestion de bases de données (MongoDB, MySQL)</li>
+            </ul>
+          </div>
 
-        <div id="outils" class="mb-3">
-          <h3>Outils & Méthodes</h3>
-          <ul>
-            <li>Git & GitHub, npm</li>
-            <li>Visual Studio Code</li>
-            <li>Py Charm</li>
-            <li>Testing & Debugging</li>
-          </ul>
-        </div>
+          <div class="col-md-6 mb-3">
+            <h3>Outils & Méthodes</h3>
+            <ul>
+              <li>Git & GitHub, npm</li>
+              <li>Visual Studio Code</li>
+              <li>Py Charm</li>
+              <li>Testing & Debugging</li>
+            </ul>
+          </div>
 
-        <div id="design" class="mb-3">
-          <h3>Design & créativité</h3>
-          <ul>
-            <li>Figma</li>
-            <li>Prototypage</li>
-            <li>Maquettage (zoning, wireframe)</li>
-          </ul>
-        </div>
+          <div class="col-md-6 mb-3">
+            <h3>Design & créativité</h3>
+            <ul>
+              <li>Figma</li>
+              <li>Prototypage</li>
+              <li>Maquettage (zoning, wireframe)</li>
+            </ul>
+          </div>
 
-        <div id="quality">
-          <h3>Qualités professionnelles</h3>
-          <ul>
-            <li>Organisée</li>
-            <li>Attentive</li>
-            <li>Polyvalente</li>
-            <li>Autonome</li>
-            <li>Responsable</li>
-          </ul>
+          <div class="col-12 mb-3">
+            <h3>Qualités professionnelles</h3>
+            <ul>
+              <li>Organisée</li>
+              <li>Attentive</li>
+              <li>Polyvalente</li>
+              <li>Autonome</li>
+              <li>Responsable</li>
+            </ul>
+          </div>
         </div>
 
       </div>
@@ -98,10 +100,12 @@
 <style scoped>
 h1 {
   margin-top: 3rem;
+  color: #d52409ff;
 }
 
-h2 {
+h2, h3 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #d52409ff;
 }
 
 .card {
@@ -110,5 +114,21 @@ h2 {
 
 .card-title {
   margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 </style>

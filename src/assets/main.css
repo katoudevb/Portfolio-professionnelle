@@ -1,9 +1,13 @@
-#app{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+#app h1, 
+#app h2, 
+#app h3, 
+#app h4,
+#app h5 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #d52409ff;
 }
 
 main{
-    background-color: #ecd7d730;
+    background-color: #f49f03;
     padding: 2rem; /* ajoute de l’espace à l’intérieur du main */
 }
-
