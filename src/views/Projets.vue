@@ -100,6 +100,7 @@ import ApiRestImage from '@/assets/images/ApiRest.png';
 import StubbornImage from '@/assets/images/Stubborn.png';
 import ArtisanImage from '@/assets/images/Artisan.png';
 import KnowledgeImage from '@/assets/images/Knowledge.png';
+import PortfolioProImage from '@/assets/images/PortfolioPro.png';
 
 interface Projet {
   id: number;
@@ -128,7 +129,7 @@ const projets: Projet[] = [
   { id: 12, title: "Application de gestion d’un port de plaisance avec une API REST", img: ApiRestImage, desc: "Création d’une application de gestion du port Russell avec Node.js", github: "https://github.com/katoudevb/port-russell-api", date: "15 Juillet 2025", category: "Ecole" },
   { id: 13, title: "Créer une application e-commerce avec Symfony 7", img: StubbornImage, desc: "Boutique en ligne de vente de sweat-shirts", github: "https://github.com/katoudevb/stubborn_shop", date: "09 Août 2025", category: "Ecole" },
   { id: 14, title: "Créer une plateforme e-learning avec Symfony 7", img: KnowledgeImage, desc: "Création d'une plateforme en ligne spécialisée dans l'édition de supports de formation à distance", github: "https://github.com/katoudevb/knowledge", date: "02 Septembre 2025", category: "Ecole" },
-  { id: 15, title: "Création de mon Portfolio Professionnelle avec Vue.js", img: PortfolioProImage, desc: "Création d'un portfolio en ligne pour présenter mes projets et mon expériences", github: "https://github.com/katoudevb/Portfolio-professionnelle", date: "22 Septembre 2025", category: "Personnels" },
+  { id: 15, title: "Création de mon Portfolio Professionnelle avec Vue.js et Bootstrap", img: PortfolioProImage, desc: "Création d'un portfolio en ligne responsive pour présenter mes projets et mon expérience", github: "https://github.com/katoudevb/Portfolio-professionnelle", date: "22 Septembre 2025", category: "Personnels" },
 ];
 
 const activeModal = ref<number | null>(null);

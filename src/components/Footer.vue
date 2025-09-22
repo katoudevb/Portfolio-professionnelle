@@ -23,7 +23,6 @@
 </template>
 
 <script setup lang="ts">
-// Pas de script nécessaire
 </script>
 
 <style scoped>
