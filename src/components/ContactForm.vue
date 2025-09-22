@@ -35,6 +35,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import emailjs from '@emailjs/browser';
 
 const form = ref({
   name: '',
@@ -44,10 +45,31 @@ const form = ref({
 
 const submitted = ref(false);
 
-function handleSubmit() {
-  console.log('Formulaire soumis:', form.value);
-  submitted.value = true;
-  form.value = { name: '', email: '', message: '' };
+// ⚠️ Remplace ces valeurs par tes identifiants EmailJS
+const SERVICE_ID = 'service_nug02wt';
+const TEMPLATE_ID = 'template_nt0lc69';
+const PUBLIC_KEY = 'vyP0AI_5mW5LIidxR';
+
+async function handleSubmit() {
+  try {
+    await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_name: form.value.name,
+        from_email: form.value.email,
+        message: form.value.message
+      },
+      PUBLIC_KEY
+    );
+
+    submitted.value = true;
+    form.value = { name: '', email: '', message: '' };
+
+  } catch (error) {
+    console.error('Erreur EmailJS :', error);
+    alert('Une erreur est survenue lors de l\'envoi du message.');
+  }
 }
 </script>
 
