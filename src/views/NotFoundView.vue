@@ -1,8 +1,8 @@
 <template>
-  <section class="notfound-container text-center">
-    <h1 class="display-1">404</h1>
-    <h2>Oups ! Page non trouvée</h2>
-    <p>La page que vous recherchez n'existe pas.</p>
+  <section class="notfound-container container d-flex flex-column justify-content-center align-items-center text-center">
+    <h1 class="display-1 fw-bold">404</h1>
+    <h2 class="fw-semibold">Oups ! Page non trouvée</h2>
+    <p class="text-muted">La page que vous recherchez n'existe pas.</p>
     <router-link to="/" class="btn btn-primary mt-3">Retour à l'accueil</router-link>
   </section>
 </template>
@@ -12,30 +12,41 @@
 
 <style scoped>
 .notfound-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 70vh;
-  text-align: center;
+  min-height: 70vh;
+  padding: 1rem;
 }
 
+/* Styles personnalisés */
 h1 {
   font-size: 8rem;
   color: #70151c;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-top: 1rem;
+/* Responsive */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
 
-p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-  color: #555;
+@media (max-width: 576px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
 }
-
+  
 .btn-primary {
   background-color: #70151c;
   border-color: #70151c;
