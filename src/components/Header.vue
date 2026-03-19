@@ -5,7 +5,7 @@
       <!-- Logo -->
       <RouterLink to="/" class="d-flex align-items-center text-decoration-none mb-2 mb-lg-0">
         <img src="@/assets/identite.png" alt="Photo d'identité" class="rounded-circle me-2" width="70" height="70">
-        <h1 class="h4 m-0 text-white">Katiana BRICOTTEAUX</h1>
+        <h1 class="h4 m-0 text-white">Développeuse web freelance à Compiègne – Katiana Bricotteaux</h1>
       </RouterLink>
 
       <!-- Menu burger -->
